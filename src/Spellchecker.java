@@ -8,21 +8,13 @@ import java.util.Scanner;
 
 public class Spellchecker {
 	/*
-	Write a program, Spellchecker.java, that goes through a file and every time it finds
-	a word not in the dictionary it offers the user a list of similar words to choose from
-	using the SoundEx algorithm (up to 20 marks) or the Levenshtein algorithm (up
-	to 30 marks). It prompts the user either to accept a word from the list or to
-	enter a replacement. New words entered by the user should be added to a local
-	dictionary. The correct spellchecked file should be stored in a different file.
-
 	My comment:
-	Local dictionary in an arraylist, whole different file is being stored word by word in an array.
-	When program doesn't recognize the word, then shows 5 similar and offers to enter new word.
+	Local dictionary in an arraylist, made out of textfile dictionary,
+	whole file is being stored word by word in an array.
+	When program doesn't recognize the word, then shows 5 similar and offers to enter new word to replace old one
+	and to add it to an arraylist.
 
-	making local dictionary from a text file
-
-	text file dictionary is never changed, program can change it only when its loaded in an array
-
+	Text file dictionary is never changed.
 	*/
 	
 	public void check(String fileR, String fileT){
@@ -87,7 +79,7 @@ public class Spellchecker {
 	    		dotRemove=true;
 	    	}
 	    	
-	    	// flag for removing the coma
+	    	// flag for removing the comma
 	    	boolean comaRemove=false;
 	    	// removing dot it there's one at the end of the word
 	    	if(text.get(x).charAt(text.get(x).length()-1)==','){
